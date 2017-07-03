@@ -77,7 +77,7 @@ source_url(
 tf <- tempfile() ; td <- tempdir()
 
 # designate the position of the input file
-input.fullname <- "ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/Documentacao/Dicionario_e_input_20161122.zip"
+input.fullname <- "ftp://ftp.ibge.gov.br/Trabalho_e_Rendimento/Pesquisa_Nacional_por_Amostra_de_Domicilios_continua/Trimestral/Microdados/Documentacao/Dicionario_e_input_20170518.zip"
 
 # download the input file immediately
 download_cached( input.fullname , tf , mode = 'wb' )
@@ -135,7 +135,7 @@ for ( i in seq_along( zip.filenames ) ){
 	# if 2016Q2, use the third
 	} else {
 	
-		sasfile <- grep( "2Tri_2016", sasfiles , value = TRUE)
+		sasfile <- grep( "2Tri_2016 a 1Tri_2017", sasfiles , value = TRUE)
 	
 	}	
 	# construct the full ftp path to the current zipped file
